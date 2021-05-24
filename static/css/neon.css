@@ -1,0 +1,77 @@
+body
+{
+	background-color: #111111;
+}
+
+div
+{
+	padding: 40px;
+	font-size: 75px;
+	font-family: 'Consolas';
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+	color: red;
+}
+
+div p
+{
+	margin: 0;
+}
+
+#error:hover
+{
+	text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff;
+}
+
+#code:hover
+{
+	text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed;
+}
+
+#error
+{
+  	color: #fff;
+  	text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+}
+
+#error span
+{
+  	animation: upper 3s linear infinite;
+}
+
+#code span:nth-of-type(2)
+{
+  	animation: lower 11s linear infinite;
+}
+
+#code span:nth-of-type(1)
+{
+	animation: lower 0.7s linear infinite;
+  	text-shadow: none;
+  	opacity:.4;
+}
+
+@keyframes upper
+{
+  	0%,12%,18.999%,23%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100%
+  	{
+    	opacity:.01; text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+  	}
+  	20%, 21%, 26%, 35%, 0%, 40%, 50%, 100%
+  	{
+    	opacity:0.4; text-shadow: none; 
+  	}
+}
+
+@keyframes lower
+{
+  	0%,12%,18.999%,23%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100%
+  	{
+    	opacity:0.99; text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  	}
+  	0%,100%
+  	{ 
+    	opacity:0.4; text-shadow: none; 
+  	}
+}
